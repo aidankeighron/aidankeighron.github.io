@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-01T13:52:55-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Serial Programmer</title><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><entry><title type="html">File Calculator</title><link href="http://localhost:4000/posts/file-calculator/" rel="alternate" type="text/html" title="File Calculator" /><published>2022-11-30T06:00:00-06:00</published><updated>2022-11-30T06:00:00-06:00</updated><id>http://localhost:4000/posts/file-calculator</id><content type="html" xml:base="http://localhost:4000/posts/file-calculator/"><![CDATA[<h1 id="file-calculator">File Calculator</h1>
+I"�<h1 id="file-calculator">File Calculator</h1>
 <p>I wanted to create a non conventional calculator so I decided to create one that takes up zero space, but how does one create a zero byte calculator.</p>
 
 <p>Folders and empty files “technically” take up zero space. I know that they take up space on your filesystem’s metadata files but when you look at its properties it says zero bytes. Lets add some restrictions so we are not generating millions of folders.</p>
@@ -14,4 +14,5 @@
 
 </span></code></pre></div></div>
 
-<p>Using a directory structure like this we can</p>]]></content><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><category term="java" /><summary type="html"><![CDATA[File Calculator I wanted to create a non conventional calculator so I decided to create one that takes up zero space, but how does one create a zero byte calculator.]]></summary></entry></feed>
+<p>Using a directory structure like this we can</p>
+:ET
