@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-30T14:14:13-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Serial Programmer</title><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><entry><title type="html">File Calculator</title><link href="http://localhost:4000/posts/the-purpose-of-education/" rel="alternate" type="text/html" title="File Calculator" /><published>2022-11-30T06:00:00-06:00</published><updated>2022-11-30T06:00:00-06:00</updated><id>http://localhost:4000/posts/the-purpose-of-education</id><content type="html" xml:base="http://localhost:4000/posts/the-purpose-of-education/"><![CDATA[]]></content><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><category term="java" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-01T13:47:54-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Serial Programmer</title><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><entry><title type="html">File Calculator</title><link href="http://localhost:4000/posts/file-calculator/" rel="alternate" type="text/html" title="File Calculator" /><published>2022-11-30T06:00:00-06:00</published><updated>2022-11-30T06:00:00-06:00</updated><id>http://localhost:4000/posts/file-calculator</id><content type="html" xml:base="http://localhost:4000/posts/file-calculator/"><![CDATA[<h1 id="file-calculator">File Calculator</h1>
+<p>I wanted to create a non conventional calculator so I decided to create one that takes up zero space, but how does one create a zero byte calculator.</p>
+
+<p>Folders and empty files “technically” take up zero space. I know that they take up space on your filesystem’s metadata files but when you look at its properties it says zero bytes. Lets add some restrictions so we are not generating millions of folders.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── 0
+├── 1
+├── 2
+│   ├── 0
+│   ├── 1
+│       └── 3
+├── 3
+</code></pre></div></div>
+
+<p>Using a directory structure like this we can</p>]]></content><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><category term="java" /><summary type="html"><![CDATA[File Calculator I wanted to create a non conventional calculator so I decided to create one that takes up zero space, but how does one create a zero byte calculator.]]></summary></entry></feed>
