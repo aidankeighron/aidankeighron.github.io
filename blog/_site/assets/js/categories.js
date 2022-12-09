@@ -1,4 +1,4 @@
-const categories = { java: [{ url: `/posts/file-calculator/`, date: `30 Nov 2022`, title: `File Calculator`},], }
+const categories = { java: [{ url: `/posts/file-calculator/`, date: `07 Dec 2022`, title: `File Calculator`},], }
 
 console.log(categories)
 
