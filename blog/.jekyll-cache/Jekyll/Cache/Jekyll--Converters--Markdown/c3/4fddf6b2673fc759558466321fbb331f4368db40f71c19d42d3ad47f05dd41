@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-09T23:05:45-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Simply Complicated</title><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><entry><title type="html">File Calculator</title><link href="http://localhost:4000/posts/file-calculator/" rel="alternate" type="text/html" title="File Calculator" /><published>2022-12-07T06:00:00-06:00</published><updated>2022-12-07T06:00:00-06:00</updated><id>http://localhost:4000/posts/file-calculator</id><content type="html" xml:base="http://localhost:4000/posts/file-calculator/"><![CDATA[<h1 id="file-calculator">File Calculator</h1>
+I"�`<h1 id="file-calculator">File Calculator</h1>
 <p>I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator?</p>
 
 <p>Why can’t we just do this?:</p>
-
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">x1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">x2</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">return</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></div></div>
-
 <p>Because it takes up space. For this project, we are trying to limit the space of whatever does the calculations i.e., <code class="language-plaintext highlighter-rouge">return x1 + x2</code>. Nearly every programming language except for a few esoteric languages has a file size that is greater than zero bytes. So how is creating a zero-byte calculator possible? First, let me clarify a few things. For this project, there will be a program (written in java for no particular reason) to generate this calculator and perform operations with it. The actual calculations will still be done with zero bytes but we will be using a program to interact with it.</p>
 
 <p>Folders and empty files “technically” take up zero space (They do take up space in your filesystem’s metadata files but we are talking about their size according to their properties). Because of that, we will be using both folders and empty files to create the calculator. As much as I would love to make a graphing calculator out of folders and files, I don’t want my computer to spend the rest of its life generating them. So let’s add some restrictions so we are not generating millions of folders and files.</p>
@@ -21,7 +19,7 @@
 
 <p>Here is a look at the files system:</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Calculator/</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Calculator</span><span class="w">
 </span><span class="err">├──</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="err">├──</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="err">├──</span><span class="w"> </span><span class="mi">2</span><span class="w">
@@ -153,4 +151,6 @@
 </code></pre></div></div>
 <p>I will talk a bit about how I found the \(O(n)\) size complexity for this project. N is the size of calculable numbers i.e., calculable numbers from 0 to 1000 would have an N of 1001. The \(O(n)\) for the files is simply just <code class="language-plaintext highlighter-rouge">size * numColumns</code> as seen above and the same is true for the 2nd dimension of files with the 1st dimension being just <code class="language-plaintext highlighter-rouge">size</code>.</p>
 
-<p>If you will like to check it out, the full code is on GitHub <a href="https://github.com/SwervyK/Calculator">Calculator</a></p>]]></content><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><category term="java" /><summary type="html"><![CDATA[File Calculator I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator? Why can’t we just do this?:]]></summary></entry></feed>
+<p>If you will like to check it out, the full code is on GitHub <a href="https://github.com/SwervyK/Calculator">Calculator</a></p>
+
+:ET

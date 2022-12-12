@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-09T23:05:45-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Simply Complicated</title><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><entry><title type="html">File Calculator</title><link href="http://localhost:4000/posts/file-calculator/" rel="alternate" type="text/html" title="File Calculator" /><published>2022-12-07T06:00:00-06:00</published><updated>2022-12-07T06:00:00-06:00</updated><id>http://localhost:4000/posts/file-calculator</id><content type="html" xml:base="http://localhost:4000/posts/file-calculator/"><![CDATA[<h1 id="file-calculator">File Calculator</h1>
+I"�`<h1 id="file-calculator">File Calculator</h1>
 <p>I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator?</p>
 
 <p>Why can’t we just do this?:</p>
@@ -153,4 +153,5 @@
 </code></pre></div></div>
 <p>I will talk a bit about how I found the \(O(n)\) size complexity for this project. N is the size of calculable numbers i.e., calculable numbers from 0 to 1000 would have an N of 1001. The \(O(n)\) for the files is simply just <code class="language-plaintext highlighter-rouge">size * numColumns</code> as seen above and the same is true for the 2nd dimension of files with the 1st dimension being just <code class="language-plaintext highlighter-rouge">size</code>.</p>
 
-<p>If you will like to check it out, the full code is on GitHub <a href="https://github.com/SwervyK/Calculator">Calculator</a></p>]]></content><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><category term="java" /><summary type="html"><![CDATA[File Calculator I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator? Why can’t we just do this?:]]></summary></entry></feed>
+<p>If you will like to check it out, the full code is on GitHub <a href="https://github.com/SwervyK/Calculator">Calculator</a></p>
+:ET
