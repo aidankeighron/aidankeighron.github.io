@@ -1,11 +1,13 @@
-I"�`<h1 id="file-calculator">File Calculator</h1>
+I"�a<h1 id="file-calculator">File Calculator</h1>
 <p>I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator?</p>
 
 <p>Why can’t we just do this?:</p>
+
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">x1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">x2</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">return</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>Because it takes up space. For this project, we are trying to limit the space of whatever does the calculations i.e., <code class="language-plaintext highlighter-rouge">return x1 + x2</code>. Nearly every programming language except for a few esoteric languages has a file size that is greater than zero bytes. So how is creating a zero-byte calculator possible? First, let me clarify a few things. For this project, there will be a program (written in java for no particular reason) to generate this calculator and perform operations with it. The actual calculations will still be done with zero bytes but we will be using a program to interact with it.</p>
 
 <p>Folders and empty files “technically” take up zero space (They do take up space in your filesystem’s metadata files but we are talking about their size according to their properties). Because of that, we will be using both folders and empty files to create the calculator. As much as I would love to make a graphing calculator out of folders and files, I don’t want my computer to spend the rest of its life generating them. So let’s add some restrictions so we are not generating millions of folders and files.</p>
@@ -19,7 +21,7 @@
 
 <p>Here is a look at the files system:</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Calculator/</span><span class="w">
 </span><span class="err">├──</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="err">├──</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="err">├──</span><span class="w"> </span><span class="mi">2</span><span class="w">
@@ -38,7 +40,7 @@
 
 <h2 id="generation">Generation</h2>
 
-<p>But before we get the answer we need to generate the files. To make it faster we will multithread. Without multithreading, it took me 30 minutes to generate all the files and folders so I think it is necessary. Now, let’s take a look at the <code class="language-plaintext highlighter-rouge">CalcThread</code> class which is the thread that will create parts of the matrix:</p>
+<p>But before we get the answer we need to generate the files. To make it faster we will <a href="https://www.geeksforgeeks.org/multithreading-in-java/">multithread</a>. Without multithreading, it took me 30 minutes to generate all the files and folders so I think it is necessary. Now, let’s take a look at the <code class="language-plaintext highlighter-rouge">CalcThread</code> class which is the thread that will create parts of the matrix:</p>
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">CalcThread</span> <span class="kd">extends</span> <span class="nc">Thread</span> <span class="o">{</span>
    
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">startRow</span><span class="o">;</span>
@@ -64,7 +66,7 @@
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
-<p>This thread’s goal is to generate a 2d matrix of folders with rows from <code class="language-plaintext highlighter-rouge">startRow</code> to <code class="language-plaintext highlighter-rouge">endRow</code> and a column length of <code class="language-plaintext highlighter-rouge">numColumns</code>. A file is created at each index with a name that is the sum of the column and row.</p>
+<p>This thread’s goal is to generate a 2d matrix of folders with rows from <code class="language-plaintext highlighter-rouge">startRow</code> to <code class="language-plaintext highlighter-rouge">endRow</code> and a column length of <code class="language-plaintext highlighter-rouge">numColumns</code>. A file is created at each index with a name that is the sum of the column and row. For example, if the row is 3 and the column is 2 the filename would be 5.</p>
 
 <p>Next, let’s take a look at the <code class="language-plaintext highlighter-rouge">calculateNumbers()</code> method which will allocate rows to each thread.</p>
 
@@ -137,7 +139,7 @@
 
 <h2 id="final-thoughts">Final Thoughts</h2>
 
-<p>This project was not meant as a serious attempt at creating an efficient calculator. In reality, this calculator takes up more space than a conventional calculator and takes longer to find the answer. It has a size complexity of \(O(2n^2 + n)\) and I don’t even want to spend time calculating the time complexity. Altogether it was a fun project and I enjoyed creating it and I hope you enjoyed reading about it.</p>
+<p>This project was not meant as a serious attempt at creating an efficient calculator. In reality, this calculator takes up more space than a conventional calculator and takes longer to find the answer. <a href="https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/">Analyzing</a> it, it has a size complexity of \(O(2n^2 + n)\) and I don’t even want to spend time calculating the time complexity. Altogether it was a fun project and I enjoyed creating it and I hope you enjoyed reading about it.</p>
 
 <h2 id="on-complexity">\(O(n)\) complexity</h2>
 
@@ -152,5 +154,4 @@
 <p>I will talk a bit about how I found the \(O(n)\) size complexity for this project. N is the size of calculable numbers i.e., calculable numbers from 0 to 1000 would have an N of 1001. The \(O(n)\) for the files is simply just <code class="language-plaintext highlighter-rouge">size * numColumns</code> as seen above and the same is true for the 2nd dimension of files with the 1st dimension being just <code class="language-plaintext highlighter-rouge">size</code>.</p>
 
 <p>If you will like to check it out, the full code is on GitHub <a href="https://github.com/SwervyK/Calculator">Calculator</a></p>
-
 :ET

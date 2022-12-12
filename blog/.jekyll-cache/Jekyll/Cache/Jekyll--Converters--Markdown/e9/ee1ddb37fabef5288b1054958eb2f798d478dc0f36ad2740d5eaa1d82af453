@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-12T13:33:01-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Simply Complicated</title><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><entry><title type="html">File Calculator</title><link href="http://localhost:4000/posts/file-calculator/" rel="alternate" type="text/html" title="File Calculator" /><published>2022-12-07T06:00:00-06:00</published><updated>2022-12-07T06:00:00-06:00</updated><id>http://localhost:4000/posts/file-calculator</id><content type="html" xml:base="http://localhost:4000/posts/file-calculator/"><![CDATA[<h1 id="file-calculator">File Calculator</h1>
+I"�a<h1 id="file-calculator">File Calculator</h1>
 <p>I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator?</p>
 
 <p>Why can’t we just do this?:</p>
@@ -40,7 +40,7 @@
 
 <h2 id="generation">Generation</h2>
 
-<p>But before we get the answer we need to generate the files. To make it faster we will <a href="https://www.geeksforgeeks.org/multithreading-in-java/" target="\_blank">multithread</a>. Without multithreading, it took me 30 minutes to generate all the files and folders so I think it is necessary. Now, let’s take a look at the <code class="language-plaintext highlighter-rouge">CalcThread</code> class which is the thread that will create parts of the matrix:</p>
+<p>But before we get the answer we need to generate the files. To make it faster we will <a href="https://www.geeksforgeeks.org/multithreading-in-java/">multithread</a>. Without multithreading, it took me 30 minutes to generate all the files and folders so I think it is necessary. Now, let’s take a look at the <code class="language-plaintext highlighter-rouge">CalcThread</code> class which is the thread that will create parts of the matrix:</p>
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">CalcThread</span> <span class="kd">extends</span> <span class="nc">Thread</span> <span class="o">{</span>
    
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">startRow</span><span class="o">;</span>
@@ -66,7 +66,7 @@
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
-<p>This thread’s goal is to generate a 2d matrix of folders with rows from <code class="language-plaintext highlighter-rouge">startRow</code> to <code class="language-plaintext highlighter-rouge">endRow</code> and a column length of <code class="language-plaintext highlighter-rouge">numColumns</code>. A file is created at each index with a name that is the sum of the column and row. For example, if the row is 3 and the column is 2 the filename would be 5.</p>
+<p>This thread’s goal is to generate a 2d matrix of folders with rows from <code class="language-plaintext highlighter-rouge">startRow</code> to <code class="language-plaintext highlighter-rouge">endRow</code> and a column length of <code class="language-plaintext highlighter-rouge">numColumns</code>. A file is created at each index with a name that is the sum of the column and row. For example if the row is 3 and the column is 2 the filename would be 5.</p>
 
 <p>Next, let’s take a look at the <code class="language-plaintext highlighter-rouge">calculateNumbers()</code> method which will allocate rows to each thread.</p>
 
@@ -139,32 +139,19 @@
 
 <h2 id="final-thoughts">Final Thoughts</h2>
 
-<p>This project was not meant as a serious attempt at creating an efficient calculator. In reality, this calculator takes up more space than a conventional calculator and takes longer to find the answer. <a href="https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/" target="\_blank">Analyzing</a> it, we find it has a size complexity of \(O(2n^2 + n)\) (simplifying down to \(O(n^2)\)) and I don’t even want to spend the time calculating time complexity. Altogether it was a fun project and I enjoyed creating it and I hope you enjoyed reading about it.</p>
+<p>This project was not meant as a serious attempt at creating an efficient calculator. In reality, this calculator takes up more space than a conventional calculator and takes longer to find the answer. <a href="https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/">Analyzing</a> it, it has a size complexity of \(O(2n^2 + n)\) and I don’t even want to spend time calculating the time complexity. Altogether it was a fun project and I enjoyed creating it and I hope you enjoyed reading about it.</p>
 
 <h2 id="on-complexity">\(O(n)\) complexity</h2>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-    <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"Numbers"</span> <span class="o">+</span> <span class="s">"\\"</span> <span class="o">+</span> <span class="n">i</span><span class="o">).</span><span class="na">mkdir</span><span class="o">();</span> <span class="c1">// 1st Dimension of folders (size)</span>
     <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">numColumns</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
-        <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"Numbers"</span> <span class="o">+</span> <span class="s">"\\"</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">"\\"</span> <span class="o">+</span> <span class="n">j</span><span class="o">).</span><span class="na">mkdir</span><span class="o">();</span> <span class="c1">// 2nd Dimension of folders (size * numColumns)</span>
-        <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"Numbers"</span> <span class="o">+</span> <span class="s">"\\"</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">"\\"</span> <span class="o">+</span> <span class="n">j</span> <span class="o">+</span> <span class="s">"\\"</span> <span class="o">+</span> <span class="o">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="o">)).</span><span class="na">createNewFile</span><span class="o">();</span> <span class="c1">// Files (size * numColumns)</span>
+        <span class="c1">// 2nd Dimension of folders</span>
+        <span class="c1">// Files</span>
     <span class="o">}</span>
+    <span class="c1">// 1st Dimension of folders</span>
 <span class="o">}</span>
 </code></pre></div></div>
 <p>I will talk a bit about how I found the \(O(n)\) size complexity for this project. N is the size of calculable numbers i.e., calculable numbers from 0 to 1000 would have an N of 1001. The \(O(n)\) for the files is simply just <code class="language-plaintext highlighter-rouge">size * numColumns</code> as seen above and the same is true for the 2nd dimension of files with the 1st dimension being just <code class="language-plaintext highlighter-rouge">size</code>.</p>
 
-<p>If you will like to check it out, the full code is on GitHub: <a href="https://github.com/SwervyK/Calculator" target="\_blank">Calculator</a></p>]]></content><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><category term="java" /><summary type="html"><![CDATA[File Calculator I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator? Why can’t we just do this?:]]></summary></entry><entry><title type="html">Sheet Scraper</title><link href="http://localhost:4000/posts/sheet-scraper/" rel="alternate" type="text/html" title="Sheet Scraper" /><published>2022-12-07T06:00:00-06:00</published><updated>2022-12-07T06:00:00-06:00</updated><id>http://localhost:4000/posts/sheet-scraper</id><content type="html" xml:base="http://localhost:4000/posts/sheet-scraper/"><![CDATA[<h1 id="sheet-scraper">Sheet Scraper</h1>
-
-<p>I wrote this program to help the FRC shirt trading community by making a spreadsheet that is a combination of members’ spreadsheets. If you are not familiar with FRC or shirt trading you probably did not understand a word of that sentence so ill give you some explanation.</p>
-
-<h2 id="frc">FRC</h2>
-
-<p>First Robotics Competition is a high school competitive robotics league. It has around +3500 teams across +25 countries. Teams will design, build, wire, and program a robot to compete in 3v3 matches against an opposing team. The way you score points each year is different so here is an example of the <a href="https://www.youtube.com/watch?v=LgniEjI9cCM">2022 game</a>.</p>
-
-<h2 id="shirt-trading">Shirt Trading</h2>
-
-<p>FRC is modeled like conventional sports, teams have mascots and team shirts. FRC does differ from conventional sports because it promotes cooperation and gracious professionalism at competitions which results in collaboration between teams. One example of this collaboration is shirt trading. Teams will make extra shirts to trade with at competitions or online. Shirts have different values depending on the team/s that are on them and how cool they are.</p>
-
-<h2 id="requirements">Requirements</h2>
-
-<p>Now that you understand</p>]]></content><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><category term="python" /><category term="FRC" /><summary type="html"><![CDATA[Sheet Scraper]]></summary></entry></feed>
+<p>If you will like to check it out, the full code is on GitHub <a href="https://github.com/SwervyK/Calculator">Calculator</a></p>
+:ET

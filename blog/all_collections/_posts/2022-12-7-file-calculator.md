@@ -48,7 +48,7 @@ System.out.println("Your answer is: " + numberFile.list()[0]);
 
 ## Generation
  
-But before we get the answer we need to generate the files. To make it faster we will multithread. Without multithreading, it took me 30 minutes to generate all the files and folders so I think it is necessary. Now, let's take a look at the `CalcThread` class which is the thread that will create parts of the matrix:
+But before we get the answer we need to generate the files. To make it faster we will [multithread](https://www.geeksforgeeks.org/multithreading-in-java/){:target="\_blank"}. Without multithreading, it took me 30 minutes to generate all the files and folders so I think it is necessary. Now, let's take a look at the `CalcThread` class which is the thread that will create parts of the matrix:
 ```java
 public static class CalcThread extends Thread {
    
@@ -75,7 +75,7 @@ public static class CalcThread extends Thread {
     }
 }
 ```
-This thread's goal is to generate a 2d matrix of folders with rows from `startRow` to `endRow` and a column length of `numColumns`. A file is created at each index with a name that is the sum of the column and row.
+This thread's goal is to generate a 2d matrix of folders with rows from `startRow` to `endRow` and a column length of `numColumns`. A file is created at each index with a name that is the sum of the column and row. For example, if the row is 3 and the column is 2 the filename would be 5.
  
 Next, let's take a look at the `calculateNumbers()` method which will allocate rows to each thread.
  
@@ -148,19 +148,19 @@ When deleting files with code, we need to delete everything recursively because 
  
 ## Final Thoughts
  
-This project was not meant as a serious attempt at creating an efficient calculator. In reality, this calculator takes up more space than a conventional calculator and takes longer to find the answer. It has a size complexity of $$O(2n^2 + n)$$ and I don't even want to spend time calculating the time complexity. Altogether it was a fun project and I enjoyed creating it and I hope you enjoyed reading about it.
+This project was not meant as a serious attempt at creating an efficient calculator. In reality, this calculator takes up more space than a conventional calculator and takes longer to find the answer. [Analyzing](https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/){:target="\_blank"} it, we find it has a size complexity of $$O(2n^2 + n)$$ (simplifying down to $$O(n^2)$$) and I don't even want to spend the time calculating time complexity. Altogether it was a fun project and I enjoyed creating it and I hope you enjoyed reading about it.
  
 ## $$O(n)$$ complexity
  
 ```java
 for (int i = 0; i < size; i++) {
+    new File("Numbers" + "\\" + i).mkdir(); // 1st Dimension of folders (size)
     for (int j = 0; j < numColumns; j++) {
-        // 2nd Dimension of folders
-        // Files
+        new File("Numbers" + "\\" + i + "\\" + j).mkdir(); // 2nd Dimension of folders (size * numColumns)
+        new File("Numbers" + "\\" + i + "\\" + j + "\\" + (i + j)).createNewFile(); // Files (size * numColumns)
     }
-    // 1st Dimension of folders
 }
 ```
 I will talk a bit about how I found the $$O(n)$$ size complexity for this project. N is the size of calculable numbers i.e., calculable numbers from 0 to 1000 would have an N of 1001. The $$O(n)$$ for the files is simply just `size * numColumns` as seen above and the same is true for the 2nd dimension of files with the 1st dimension being just `size`.
  
-If you will like to check it out, the full code is on GitHub [Calculator](https://github.com/SwervyK/Calculator)
+If you will like to check it out, the full code is on GitHub: [Calculator](https://github.com/SwervyK/Calculator){:target="\_blank"}

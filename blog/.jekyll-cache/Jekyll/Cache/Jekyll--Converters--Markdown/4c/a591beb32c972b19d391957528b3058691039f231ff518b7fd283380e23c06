@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-12T13:33:01-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Simply Complicated</title><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><entry><title type="html">File Calculator</title><link href="http://localhost:4000/posts/file-calculator/" rel="alternate" type="text/html" title="File Calculator" /><published>2022-12-07T06:00:00-06:00</published><updated>2022-12-07T06:00:00-06:00</updated><id>http://localhost:4000/posts/file-calculator</id><content type="html" xml:base="http://localhost:4000/posts/file-calculator/"><![CDATA[<h1 id="file-calculator">File Calculator</h1>
+I"pg<h1 id="file-calculator">File Calculator</h1>
 <p>I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator?</p>
 
 <p>Why can’t we just do this?:</p>
@@ -153,18 +153,5 @@
 </code></pre></div></div>
 <p>I will talk a bit about how I found the \(O(n)\) size complexity for this project. N is the size of calculable numbers i.e., calculable numbers from 0 to 1000 would have an N of 1001. The \(O(n)\) for the files is simply just <code class="language-plaintext highlighter-rouge">size * numColumns</code> as seen above and the same is true for the 2nd dimension of files with the 1st dimension being just <code class="language-plaintext highlighter-rouge">size</code>.</p>
 
-<p>If you will like to check it out, the full code is on GitHub: <a href="https://github.com/SwervyK/Calculator" target="\_blank">Calculator</a></p>]]></content><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><category term="java" /><summary type="html"><![CDATA[File Calculator I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator? Why can’t we just do this?:]]></summary></entry><entry><title type="html">Sheet Scraper</title><link href="http://localhost:4000/posts/sheet-scraper/" rel="alternate" type="text/html" title="Sheet Scraper" /><published>2022-12-07T06:00:00-06:00</published><updated>2022-12-07T06:00:00-06:00</updated><id>http://localhost:4000/posts/sheet-scraper</id><content type="html" xml:base="http://localhost:4000/posts/sheet-scraper/"><![CDATA[<h1 id="sheet-scraper">Sheet Scraper</h1>
-
-<p>I wrote this program to help the FRC shirt trading community by making a spreadsheet that is a combination of members’ spreadsheets. If you are not familiar with FRC or shirt trading you probably did not understand a word of that sentence so ill give you some explanation.</p>
-
-<h2 id="frc">FRC</h2>
-
-<p>First Robotics Competition is a high school competitive robotics league. It has around +3500 teams across +25 countries. Teams will design, build, wire, and program a robot to compete in 3v3 matches against an opposing team. The way you score points each year is different so here is an example of the <a href="https://www.youtube.com/watch?v=LgniEjI9cCM">2022 game</a>.</p>
-
-<h2 id="shirt-trading">Shirt Trading</h2>
-
-<p>FRC is modeled like conventional sports, teams have mascots and team shirts. FRC does differ from conventional sports because it promotes cooperation and gracious professionalism at competitions which results in collaboration between teams. One example of this collaboration is shirt trading. Teams will make extra shirts to trade with at competitions or online. Shirts have different values depending on the team/s that are on them and how cool they are.</p>
-
-<h2 id="requirements">Requirements</h2>
-
-<p>Now that you understand</p>]]></content><author><name>Aidan Keighron</name><email>aidankeighron@gmail.com</email></author><category term="python" /><category term="FRC" /><summary type="html"><![CDATA[Sheet Scraper]]></summary></entry></feed>
+<p>If you will like to check it out, the full code is on GitHub: <a href="https://github.com/SwervyK/Calculator" target="\_blank">Calculator</a></p>
+:ET
