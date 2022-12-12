@@ -1,4 +1,4 @@
-const categories = { java: [{ url: `/posts/file-calculator/`, date: `12 Dec 2022`, title: `File Calculator`},], }
+const categories = { python: [{ url: `/posts/sheet-scraper/`, date: `07 Dec 2022`, title: `Sheet Scraper`},],FRC: [{ url: `/posts/sheet-scraper/`, date: `07 Dec 2022`, title: `Sheet Scraper`},],java: [{ url: `/posts/file-calculator/`, date: `12 Dec 2022`, title: `File Calculator`},], }
 
 console.log(categories)
 
