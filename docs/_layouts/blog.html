@@ -7,15 +7,15 @@
       <section class="articles">
         {% for post in site.posts %}
         <article class="article">
-          <h2 class="article-title">
-            <a href="{{site.baseurl}}{{post.url}}"> {{post.title}} </a>
-          </h2>
-          <small class="date">{{post.date | date_to_string}}</small>
+          <a class="block" href="{{site.baseurl}}{{post.url}}">
+            <h2 class="article-title">
+              {{post.title}} 
+            </h2>
+            <small class="date">{{post.date | date_to_string}}</small>
+          </a>
           <div class="categories">
             {% for c in post.categories %}
-            <a href="#!" data-base-url="{{site.baseurl}}" class="category"
-              >{{c}}</a
-            >
+            <a href="#!" data-base-url="{{site.baseurl}}" class="category">{{c}}</a>
             {% endfor %}
           </div>
         </article>
