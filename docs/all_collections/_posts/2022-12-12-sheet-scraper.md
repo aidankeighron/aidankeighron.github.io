@@ -256,7 +256,6 @@ def parse_sheet(sheet, start, end, user, id, category_locations):
             shirt[category] = sheet[row][col]
         if shirt["Name"] == "" and shirt["Number"] != "":
             try:
-                int(shirt["Number"])
                 shirt["Name"] = get_team_name(int(shirt["Number"]))
             except:
                 ...
@@ -293,7 +292,6 @@ In this section we are looping through the `category_locations` dictionary which
 ```python
 if shirt["Name"] == "" and shirt["Number"] != "":
     try:
-        int(shirt["Number"])
         shirt["Name"] = get_team_name(int(shirt["Number"]))
     except:
         ...
@@ -331,6 +329,8 @@ Finally before we append the `shirt` dictionary to `shirts` we need to verify it
 
 # Sorting
 
+Once we have a compleat list of all of the shirts we need to sort them.
+
 ```python
 def sort_sheet(shirts):
     nonInt = {}
@@ -353,6 +353,33 @@ def sort_sheet(shirts):
             print(str(e))
     return shirts
 ```
+
+Because there is no guarantee that the number colum of the spreadsheet is a valid integer so we need to reassign it so we can sort it numerically by team number.
+
+```python
+for row in shirts:
+    try:
+        row[1] = int(row[1])
+    except:
+        nonInt[str(currentInt)] = row[1]  
+        row[1] = currentInt
+        currentInt += 1
+```
+
+Here we check to see if the current index is an integer, if not we assign it a unique value so we can sort everything later.
+
+```python
+shirts.sort(key=lambda x: int(x[1]))
+
+for row in shirts:
+    try:
+        if row[1] >= 999999999:
+            row[1] = nonInt[str(row[1])]
+    except Exception as e:
+        print(str(e))
+```
+
+Now we sort the shirts and reassign them from the placeholder vales. 
 
 # Saving Results
 
@@ -383,6 +410,8 @@ def write_result(sheet, id):
 Here we add `User` and `ID` to the categories and update the results sheet. We then format the sheet so the category row is frozen and bold.
 
 # Final Thoughts
+
+This was a fun project. There was definitely some difficulty with creating algorithms that work for any spreadsheet as there was a lot of variety between them but I enjoyed creating them. I hope this was helpful if you found this in search for a solution to a problem or enjoyed it if you were just reading for fun.
 
 # BONUS counting the number of occurrences each shirt has
 
