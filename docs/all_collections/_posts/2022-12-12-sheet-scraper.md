@@ -16,17 +16,17 @@ categories: [python, FRC]
 - [Bonus](#bonus-counting-number-of-each-shirt-number)
 
 # Sheet Scraper
-* The code shown here has been modified to make it easier to explain. If you will like to check it out, the full code is on GitHub: [Sheet Scraper](https://github.com/SwervyK/Sheet-Scraper){:target="\_blank"}. If you would like to see the final result here is a link to the [spreadsheet](https://docs.google.com/spreadsheets/d/1xDtfRs81EcdFHOiG-Nua_mBz2xAD4tFVVtNt6SjwPoM/edit#gid=341185536){:target="\_blank"}
+* The code shown here has been modified to make it easier to explain. If you will like to check it out, the full code is available on GitHub: [Sheet Scraper](https://github.com/SwervyK/Sheet-Scraper){:target="\_blank"}. If you would like to see the final result here is a link to the [spreadsheet](https://docs.google.com/spreadsheets/d/1xDtfRs81EcdFHOiG-Nua_mBz2xAD4tFVVtNt6SjwPoM/edit#gid=341185536){:target="\_blank"}.
 
-I wrote this program to help the FRC shirt trading community by making a spreadsheet that is a combination of members' spreadsheets. If you are not familiar with FRC or shirt trading you probably did not understand a word of that sentence so I will give you some explanation.
+I wrote this program to help the FRC shirt trading community by making a spreadsheet that is a combination of members' spreadsheets. If you are not familiar with FRC or shirt trading you probably did not understand a word of that sentence so I will give a brief overview.
 
 ## FRC
 
-First Robotics Competition is a high school competitive robotics league. It has around +3500 teams across +25 countries. Teams will design, build, wire, and program a robot to compete in 3v3 matches against an opposing team. The way you score points each year is different so here is an example of the [2022 game](https://www.youtube.com/watch?v=LgniEjI9cCM).
+First Robotics Competition is a high school competitive robotics league. It has around +3500 teams across +25 countries. Teams will design, build, wire, and program a robot to compete in 3v3 matches against an opposing team. The way you score points each year is different (Here is an example of the [2022 game](https://www.youtube.com/watch?v=LgniEjI9cCM)).
 
 ## Shirt Trading
 
-FRC is modeled like conventional sports, teams have mascots and team shirts. FRC does differ from conventional sports because it promotes cooperation and gracious professionalism at competitions which results in collaboration between teams. One example of this collaboration is shirt trading. Teams will make extra shirts to trade with at competitions or online. Shirts have different values depending on the team/s that are on them and how cool they are. There is a Discord server for shirt trading with channels for posting spreadsheets of shirt inventories.
+FRC is modeled like conventional sports, teams have mascots and team shirts. FRC does differ from conventional sports because it promotes cooperation and gracious professionalism at competitions which results in collaboration between teams. One example of this collaboration is shirt trading. Teams will make extra shirts to trade at competitions or online. Shirts have different values depending on the team/s that are on them and how cool they are. There is a Discord server for shirt trading with channels for posting spreadsheets of shirt inventories.
 
 ## Requirements
 
@@ -74,7 +74,7 @@ def get_ids():
     return get_sheet_id(retrieve_messages(keys.CHANNEL_ID))
 ```
 
-Let's start with `retrieve_messages`. We pass in the discord channel we want to get the messages of and using the requests we get the channel data from the Discord API. Next we send all of the channel data to `get_sheet_id` where we loop though every message and extract the spreadsheet id if it exists.
+Let's start with `retrieve_messages`. We pass in the discord channel we want to get the messages of and using requests we get the channel data from the Discord API. Next we send all of the channel data to `get_sheet_id` where we loop though every message and extract the spreadsheet id if it exists.
 
 ### **Forums Channel**
 
@@ -161,7 +161,7 @@ for row in range(start + 1, len(sheet)):
     for col in range(len(sheet[row])):
 ```
 
-We create an empty dictionary to store the colum numbers for each category. Next we start to loop through every index of the spreadsheet but first we need to figure out how to find out if a current index contains a category.
+We create an empty dictionary to store the colum numbers for each category. Next we start to loop through every row of the spreadsheet but first we need to figure out how to find out if a current index contains a category.
 
 ```python
 def check_category(val):
@@ -191,7 +191,7 @@ def check_category(val):
     return "none"
 ```
 
-Here is the `checkCategory` method we use to look for keywords in each index of the spreadsheet. Now lets look at how we loop through each index.
+Here is the `checkCategory` method we use to look for keywords in each index of the spreadsheet. Now lets look at how we loop through each row.
 
 ```python
 if check_category(sheet[row][col]) != "none" and category_locations[check_category(sheet[row][col])] == -1:
@@ -199,7 +199,7 @@ if check_category(sheet[row][col]) != "none" and category_locations[check_catego
     start = row
 ```
 
-At each index we check to see if it contains a category by passing it into our `check_category` method as long as it does not return `"none"` it is a valid category. We also check to make sure that this category has not already been found. After those conditions have been checked we save the category's colum number and the current row number.
+At each index we check to see if it contains a category by passing it into our `check_category` method as long as it does not return `"none"` it is a valid category. We also check to make sure that this category has not already been found. After those conditions have been met we save the category's colum number and the current row number.
 
 ```python
 for row in range(start + 1, len(sheet)):
@@ -208,7 +208,7 @@ for row in range(start + 1, len(sheet)):
         break
 ```
 
-After we are done looping through the row we check to see if start has been reassigned which means that a row contains categories has been found. In every spreadsheet the categories are always in a row so there is no reason to continue looking. But what if the sheet has a header that accidentally contains a "category". 
+After we are done looping through the row we check to see if start has been reassigned which means that a row containing categories has been found. In every spreadsheet the categories are always in a row so there is no reason to continue looking. But what if the sheet has a header that accidentally contains a "category". 
 
 ```python
 categoriesFound = sum(1 for _, category in category_locations.items() if category != -1)
@@ -313,7 +313,7 @@ def get_team_name(number):
     return request.json()['nickname']
 ```
 
-Here we use a try catch loop to see if we already have the name cached. If we don't then we make a call to the API using the team number and then accessing the nickname from the json.
+Here we use a try catch loop to see if we already have the name cached. If we don't then we make a call to the API using the team number and then access the nickname from the json.
 
 ```python
 numNotEmpty = sum(1 for _, col in shirt.items() if col != '')
@@ -329,7 +329,7 @@ Finally before we append the `shirt` dictionary to `shirts` we need to verify it
 
 # Sorting
 
-Once we have a compleat list of all of the shirts we need to sort them.
+Once we have a complete list of all of the shirts we, need to sort them.
 
 ```python
 def sort_sheet(shirts):
@@ -354,7 +354,7 @@ def sort_sheet(shirts):
     return shirts
 ```
 
-Because there is no guarantee that the number colum of the spreadsheet is a valid integer so we need to reassign it so we can sort it numerically by team number.
+Because there is no guarantee that the number colum of the spreadsheet is a valid integer we need to reassign it so we can sort it numerically by team number.
 
 ```python
 for row in shirts:
@@ -379,11 +379,11 @@ for row in shirts:
         print(str(e))
 ```
 
-Now we sort the shirts and reassign them from the placeholder vales. 
+Now we sort the shirts and reassign them using the placeholder vales. 
 
 # Saving Results
 
-Now that we have a compleat sorted list of every shirt we can save them to our results spreadsheet.
+Now that we have a complete sorted list of every shirt we can save them to our results spreadsheet.
 
 ```python
 def write_result(sheet, id):
@@ -411,7 +411,7 @@ Here we add `User` and `ID` to the categories and update the results sheet. We t
 
 # Final Thoughts
 
-This was a fun project. There was definitely some difficulty with creating algorithms that work for any spreadsheet as there was a lot of variety between them but I enjoyed creating them. I hope this was helpful if you found this in search for a solution to a problem or enjoyed it if you were just reading for fun.
+This was a fun project. There was definitely some difficulty with creating algorithms to work for any spreadsheet as there was a lot of variety between them. Overall I had fun creating the algorithms and I hope you had fun reading about it.
 
 # BONUS counting the number of occurrences each shirt has
 

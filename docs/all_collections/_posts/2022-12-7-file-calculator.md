@@ -6,7 +6,7 @@ categories: [java]
 ---
 
 # File Calculator
-* The code shown here has been modified to make it easier to explain. If you will like to check it out, the full code is on GitHub: [Calculator](https://github.com/SwervyK/Calculator){:target="\_blank"}
+* The code shown here has been modified to make it easier to explain. If you will like to check it out, the full code is available on GitHub: [Calculator](https://github.com/SwervyK/Calculator){:target="\_blank"}
  
 I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator?
  
