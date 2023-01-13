@@ -126,6 +126,10 @@ main {
   line-height: 1.3rem;
   cursor: pointer;
 }
+
+.date {
+  color: #A9ABB3;
+}
 /* media query */
 
 @media screen and (max-width: 750px) {

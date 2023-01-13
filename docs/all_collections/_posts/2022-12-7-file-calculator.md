@@ -6,6 +6,8 @@ categories: [java]
 ---
 
 # File Calculator
+* The code shown here has been modified to make it easier to explain. If you will like to check it out, the full code is available on GitHub: [Calculator](https://github.com/SwervyK/Calculator){:target="\_blank"}
+ 
 I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator?
  
 Why can't we just do this?:
@@ -163,4 +165,4 @@ for (int i = 0; i < size; i++) {
 ```
 I will talk a bit about how I found the $$O(n)$$ size complexity for this project. N is the size of calculable numbers i.e., calculable numbers from 0 to 1000 would have an N of 1001. The $$O(n)$$ for the files is simply just `size * numColumns` as seen above and the same is true for the 2nd dimension of files with the 1st dimension being just `size`.
  
-If you will like to check it out, the full code is on GitHub: [Calculator](https://github.com/SwervyK/Calculator){:target="\_blank"}
+Full code: [Calculator](https://github.com/SwervyK/Calculator){:target="\_blank"}
