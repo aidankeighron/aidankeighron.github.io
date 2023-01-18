@@ -5,15 +5,21 @@ date: 2023-1-13 12:00:00
 categories: [python, FRC]
 ---
 
-# Table of Contents
-- [Requirements](#requirements)
-- [Getting the Spreadsheets](#getting-the-spreadsheets)
-- [Parsing the Spreadsheet](#parsing-the-spreadsheet)
-- [Parsing the Inventories](#parsing-the-inventories)
-- [Sorting](#sorting)
-- [Saving Results](#saving-results)
-- [Final Thoughts](#final-thoughts)
-- [Bonus](#bonus-counting-number-of-each-shirt-number)
+<details open>
+<summary><b>Table of Contents</b></summary>
+<ul>
+<li><a href="#sheet-scraper">Sheet Scraper</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#getting-links-from-discord">Getting Links From Discord</a></li>
+<li><a href="#getting-the-spreadsheets">Getting the Spreadsheets</a></li>
+<li><a href="#parsing-the-spreadsheet">Parsing the Spreadsheet</a></li>
+<li><a href="#parsing-the-inventories">Parsing the Inventories</a></li>
+<li><a href="#sorting">Sorting</a></li>
+<li><a href="#saving-results">Saving Results</a></li>
+<li><a href="#final-thoughts">Final Thoughts</a></li>
+<li><a href="#bonus-counting-the-number-of-occurrences-each-shirt-has">Bonus</a></li>
+</ul>
+</details>
 
 # Sheet Scraper
 * The code shown here has been modified to make it easier to explain. If you will like to check it out, the full code is available on GitHub: [Sheet Scraper](https://github.com/SwervyK/Sheet-Scraper){:target="\_blank"}. If you would like to see the final result here is a link to the [spreadsheet](https://docs.google.com/spreadsheets/d/1xDtfRs81EcdFHOiG-Nua_mBz2xAD4tFVVtNt6SjwPoM/edit#gid=341185536){:target="\_blank"}.

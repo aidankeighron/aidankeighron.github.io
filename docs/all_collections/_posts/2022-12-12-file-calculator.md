@@ -5,6 +5,17 @@ date: 2022-12-12 12:00:00
 categories: [java]
 ---
 
+<details open>
+<summary><b>Table of Contents</b></summary>
+<ul>
+<li><a href="#file-system">File System</a></li>
+<li><a href="#generation">Generation</a></li>
+<li><a href="#deletion">Deletion</a></li>
+<li><a href="#final-thoughts">Final Thoughts</a></li>
+<li><a href="#on-complexity">O(n) Complexity</a></li>
+</ul>
+</details>
+
 # File Calculator
 * The code shown here has been modified to make it easier to explain. If you will like to check it out, the full code is available on GitHub: [Calculator](https://github.com/SwervyK/Calculator){:target="\_blank"}
  
