@@ -29,6 +29,7 @@ body {
   font-family: "JetBrains Mono", monospace;
   line-height: 2rem;
   background-color: var(--gray-5);
+  scroll-behavior: smooth;
 }
 .content a {
   color: cyan;
