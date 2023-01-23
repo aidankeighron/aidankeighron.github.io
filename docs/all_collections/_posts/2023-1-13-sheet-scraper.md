@@ -5,10 +5,16 @@ date: 2023-1-13 12:00:00
 categories: [python, FRC]
 ---
 
-<details open>
+# Project Overview
+
+I wrote this program to help the FRC shirt trading community by making a spreadsheet that is a combination of members' spreadsheets. If you are not familiar with FRC or shirt trading you probably did not understand a word of that sentence so I will give a brief overview.
+
+The code shown here has been modified to make it easier to explain. If you will like to check it out, the full code is available on GitHub: [Sheet Scraper](https://github.com/SwervyK/Sheet-Scraper){:target="\_blank"}. If you would like to see the final result here is a link to the [spreadsheet](https://docs.google.com/spreadsheets/d/1xDtfRs81EcdFHOiG-Nua_mBz2xAD4tFVVtNt6SjwPoM/edit#gid=341185536){:target="\_blank"}.
+
+<details>
 <summary><b>Table of Contents</b></summary>
 <ul>
-<li><a href="#sheet-scraper">Sheet Scraper</a></li>
+<li><a href="#project-overview">Project Overview</a></li>
 <li><a href="#requirements">Requirements</a></li>
 <li><a href="#getting-links-from-discord">Getting Links From Discord</a></li>
 <li><a href="#getting-the-spreadsheets">Getting the Spreadsheets</a></li>
@@ -20,11 +26,6 @@ categories: [python, FRC]
 <li><a href="#bonus-counting-the-number-of-occurrences-each-shirt-has">Bonus</a></li>
 </ul>
 </details>
-
-# Sheet Scraper
-* The code shown here has been modified to make it easier to explain. If you will like to check it out, the full code is available on GitHub: [Sheet Scraper](https://github.com/SwervyK/Sheet-Scraper){:target="\_blank"}. If you would like to see the final result here is a link to the [spreadsheet](https://docs.google.com/spreadsheets/d/1xDtfRs81EcdFHOiG-Nua_mBz2xAD4tFVVtNt6SjwPoM/edit#gid=341185536){:target="\_blank"}.
-
-I wrote this program to help the FRC shirt trading community by making a spreadsheet that is a combination of members' spreadsheets. If you are not familiar with FRC or shirt trading you probably did not understand a word of that sentence so I will give a brief overview.
 
 ## FRC
 

@@ -4,10 +4,17 @@ title: File Calculator
 date: 2022-12-12 12:00:00
 categories: [java]
 ---
+ 
+# Project Overview
 
-<details open>
+I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator?
+
+The code shown here has been modified to make it easier to explain. If you will like to check it out, the full code is available on GitHub: [Calculator](https://github.com/SwervyK/Calculator){:target="\_blank"}
+
+<details>
 <summary><b>Table of Contents</b></summary>
 <ul>
+<li><a href="#project-overview">Project Overview</a></li>
 <li><a href="#file-system">File System</a></li>
 <li><a href="#generation">Generation</a></li>
 <li><a href="#deletion">Deletion</a></li>
@@ -15,12 +22,9 @@ categories: [java]
 <li><a href="#on-complexity">O(n) Complexity</a></li>
 </ul>
 </details>
+ 
+## File System
 
-# File Calculator
-* The code shown here has been modified to make it easier to explain. If you will like to check it out, the full code is available on GitHub: [Calculator](https://github.com/SwervyK/Calculator){:target="\_blank"}
- 
-I decided I wanted to create a non-conventional calculator. So, I created one that takes up no space (taking up zero bytes), but how does one create a zero-byte calculator?
- 
 Why can't we just do this?:
 
 ```java
@@ -36,9 +40,8 @@ Folders and empty files "technically" take up zero space (They do take up space 
 - Calculable numbers are from 0 and 1000
 - The only operation available is addition
 
-## File System
  
-Here is a look at the files system:
+Here is a look at the file system:
 
 ```json
 Calculator/
