@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Setup Fantasy FRC
-date: 2023-1-25 12:00:00
+date: 2023-1-30 12:00:00
 categories: [website, FRC]
 ---
 
@@ -65,6 +65,7 @@ The source code is protected under the MIT license so you have full rights to mo
 <ul>
 <li><a href="#project-overview">Project Overview</a></li>
 <li><a href="#updates">Updates</a></li>
+<li><a href="#modifying">Modifying</a></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#download-source-code-and-required-software">Download Source Code and Required Software</a></li>
 <li><a href="#setup-database-and-apis">Setup Database and APIs</a></li>
@@ -72,15 +73,6 @@ The source code is protected under the MIT license so you have full rights to mo
 <li><a href="#yearly-setup">Yearly Setup</a></li>
 <li><a href="#run">Run</a></li>
 <li><a href="#showcase">Showcase</a></li>
-<li><a href="#home">Home</a></li>
-<li><a href="#teams">Teams</a></li>
-<li><a href="#rankings">Rankings</a></li>
-<li><a href="#login">Login</a></li>
-<li><a href="#settings">Settings</a></li>
-<li><a href="#how-to">How To</a></li>
-<li><a href="#admin">Admin</a></li>
-<li><a href="#drafting">Drafting</a></li>
-<li><a href="#search">Search</a></li>
 </ul>
 </details>
 
