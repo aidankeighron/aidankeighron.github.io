@@ -195,8 +195,7 @@ Run the website using `node server.js` (server.js in /server) and navigate to `<
 ## Yearly Setup
 
 The setup for the 2023 season is already done but if you need to redo it for any reason here is the process.
-- Update the year in both update_teams.py and get_team_info.py
-- Run setupEvents() and replace the value of `EVENTS =` with the output from setupEvents()
+- Update the year in both rolling_team_info.py and get_team_info.py
 - Run /server/get_team_info.py and move the generated team_info.json to /server
 
 ## Run
@@ -213,7 +212,7 @@ The draft starts when the `Start Draft` button is pressed on the admin page. As 
 
 ## How do teams get a score
 
-Run `/server/update_teams.py` every Sunday (or you can schedule it to be automatically run) and it will update all team's and user's scores. It will go through every event that has occurred between the previous Sunday and one day before the current Sunday. I am working on adding rolling updates where each event is scored the day after it ends and I hope to get it done before events begin.
+Run `/server/rolling_team_info.py` and it will update all team's and user's scores. It will need to be ran regurarly to keep things up to date.
 
 # Showcase
 
