@@ -9,7 +9,7 @@ categories: [python, FRC]
 
 I wrote this program to help the FRC shirt trading community by making a spreadsheet that is a combination of members' spreadsheets. If you are not familiar with FRC or shirt trading you probably did not understand a word of that sentence so I will give a brief overview.
 
-The code shown here has been modified to make it easier to explain. If you would like to check it out, the full code is available on GitHub: [Sheet Scraper](https://github.com/SwervyK/Sheet-Scraper){:target="\_blank"}. If you would like to see the final result here is a link to the [spreadsheet](https://docs.google.com/spreadsheets/d/1xDtfRs81EcdFHOiG-Nua_mBz2xAD4tFVVtNt6SjwPoM/edit#gid=341185536){:target="\_blank"}.
+The code shown here has been modified to make it easier to explain. If you would like to check it out, the full code is available on GitHub: [Sheet Scraper](https://github.com/aidankeighron/Sheet-Scraper){:target="\_blank"}. If you would like to see the final result here is a link to the [spreadsheet](https://docs.google.com/spreadsheets/d/1xDtfRs81EcdFHOiG-Nua_mBz2xAD4tFVVtNt6SjwPoM/edit#gid=341185536){:target="\_blank"}.
 
 <details>
 <summary><b>Table of Contents</b></summary>
@@ -441,4 +441,4 @@ result = service.spreadsheets().values().update(spreadsheetId=RESULT, range="Cou
 
 First we get the data from the result spreadsheet. Next loop through each index counting the number of times each shirt occurs. Then we convert it to a list and add the result to the `Count` page of the final spreadsheet.
 
-Full code: [Sheet Scraper](https://github.com/SwervyK/Sheet-Scraper){:target="\_blank"} Result: [Spreadsheet](https://docs.google.com/spreadsheets/d/1xDtfRs81EcdFHOiG-Nua_mBz2xAD4tFVVtNt6SjwPoM/edit#gid=341185536){:target="\_blank"}
+Full code: [Sheet Scraper](https://github.com/aidankeighron/Sheet-Scraper){:target="\_blank"} Result: [Spreadsheet](https://docs.google.com/spreadsheets/d/1xDtfRs81EcdFHOiG-Nua_mBz2xAD4tFVVtNt6SjwPoM/edit#gid=341185536){:target="\_blank"}
