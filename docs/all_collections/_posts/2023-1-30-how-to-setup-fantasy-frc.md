@@ -10,52 +10,6 @@ categories: [website, FRC]
 Fantasy FRC is fantasy football with robotics. It is a website that manages the full process of running a draft for FRC and it's pretty customizable. If you want to see how it looks check out the [showcase](#showcase).
 
 If you would like to check it out, the full code is available on GitHub: [Fantasy FRC](https://github.com/aidankeighron/Fantasy-FRC){:target="\_blank"}.
-
-## Updates
-
-This project is going to receive future updates, if you would like to receive an email when these updates happen along with instructions on how to update your version, add your email below.
-
-\* Email might get sent to spam or promotions folder
-
-<!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{
-    background:black; clear:left;
-  }
-  .mce_inline_error {
-    color: black !important;
-    width: 96.5%;
-    margin-left: 1% !important;
-  }
-</style>
-<div id="mc_embed_signup" style="border-radius: 25px">
-    <form action="https://fantasyrobotics.us21.list-manage.com/subscribe/post?u=e32ab2f618eca5c413307660c&amp;id=a56b26e9b4&amp;f_id=003de7e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div style="overflow-x: visible !important">
-        <h2>Receive Updates</h2>
-        <div class="mc-field-group">
-          <label for="mce-EMAIL" style="margin-left: 1%">Email Address  <span class="asterisk">*</span></label>
-          <input style="width: 97%; background-color: #A9ABB3; margin-left: 1%" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-          <span id="mce-EMAIL-HELPERTEXT" style="background-color: black; color: white;" class="helper_text"></span>
-        </div>
-        <div hidden="true" class="error-msg"><input type="hidden" name="tags" value="261553"></div>
-        <div id="mce-responses" class="clear foot">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
-        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e32ab2f618eca5c413307660c_a56b26e9b4" tabindex="-1" value=""></div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input style="background-color: #A9ABB3;margin-left: 1%" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                <p class="brandingLogo"><a style="border-bottom: 0px" href="http://eepurl.com/ijnwl1" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_light_dtp.svg"></a></p>
-            </div>
-        </div>
-    </div>
-    </form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
-
 ## Modifying
 
 The source code is protected under the MIT license so you have full rights to modify it as long as you keep the licenses and copyright intact. NOTE I am not an expert in JS and while I have done my best to weed out any bugs there might still be some out there. If you find any please open an issue on GitHub or create a pull request with a fix. 
@@ -64,7 +18,6 @@ The source code is protected under the MIT license so you have full rights to mo
 <summary><b>Table of Contents</b></summary>
 <ul>
 <li><a href="#project-overview">Project Overview</a></li>
-<li><a href="#updates">Updates</a></li>
 <li><a href="#modifying">Modifying</a></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#download-source-code-and-required-software">Download Source Code and Required Software</a></li>
