@@ -26,7 +26,7 @@ The code shown here has been modified to make it easier to explain. If you would
 
 PID, or proportional integral derivative, is a control algorithm. It is a technique for getting value A to become value B while accounting for acceleration and inertia. We can see this in action by looking at a graph of a PID output:
 
-<img src="/assets/icons/pid-visuial/not-enough-Derivative.png" style="border:5px solid black;display: block;margin-left: auto;margin-right: auto;width: 60%;">
+<img src="/assets/icons/pid-visual/not-enough-Derivative.png" style="border:5px solid black;display: block;margin-left: auto;margin-right: auto;width: 60%;">
 
 The blue line represents the target, while the red line represents the PID algorithm's output. The PID output begins slowly and then accelerates. In the end, the PID progressively slows down to accommodate for inertia. PIDs are very configurable; you can tweak a PID to arrive at the destination as rapidly as possible, as precisely as possible, or a combination of the two.
 
@@ -48,7 +48,7 @@ $$P = kP * error$$
 
 The proportional term is calculated by multiplying the error by a constant kP. kP is determined by starting with a random number (typically a factor of 10 less than 1) and changing it until you get the outcome you want. There are a few mathematical methods for tuning a PID, but because of the vast variety of possible "solutions," it is typically best to adjust it by hand. The proportional term has the greatest overall influence on the PID output.
 
-<img src="/assets/icons/pid-visuial/K-factor-too-low.png" style="border:5px solid black;display: block;margin-left: auto;margin-right: auto;width: 60%;">
+<img src="/assets/icons/pid-visual/K-factor-too-low.png" style="border:5px solid black;display: block;margin-left: auto;margin-right: auto;width: 60%;">
 * To low of a kP term
 
 #### Integral Term (I):
@@ -57,7 +57,7 @@ $$I = kI * \int_0^t error(T) \,dT$$
 
 The integral term is calculated by integrating over all errors since the start of the PID and multiplying it by a constant kI. kI is normally a relatively small number since a large kI can cause oscillation. Because of these problems, the integral term is often restricted to a small value. The integral term is a push to get the actual to the setpoint.
 
-<img src="/assets/icons/pid-visuial/Derivative-too-low.png" style="border:5px solid black;display: block;margin-left: auto;margin-right: auto;width: 60%;">
+<img src="/assets/icons/pid-visual/Derivative-too-low.png" style="border:5px solid black;display: block;margin-left: auto;margin-right: auto;width: 60%;">
 * Here you can see oscillation within a PID, probably too high of a kI
 
 #### Derivative Term (D):
@@ -74,7 +74,7 @@ I mentioned it previously, but let me go over how to tune a PID. Because each 
 
 Here's a simulation of a PID I created to showcase how it worksS:
 
-<img>
+<img src="/assets/icons/pid-visual/PID_Showcase.gif" style="border:5px solid black;display: block;margin-left: auto;margin-right: auto;width: 60%;">
 
 The slider adjusts the PID's setpoint. You can modify kP, kI, and kD to get different PID outputs.
 
