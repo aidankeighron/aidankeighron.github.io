@@ -170,7 +170,7 @@ main {
 .content div,
 .content div pre,
 .content div pre code {
-  overflow-x: auto !important;
+  /* overflow-x: auto !important; */
 }
 
 .content pre {
