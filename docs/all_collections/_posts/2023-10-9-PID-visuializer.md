@@ -80,4 +80,23 @@ The slider adjusts the PID's setpoint. You can modify kP, kI, and kD to get diff
 
 # BONUS Taking PID to the Next Level
 
+PIDs are a complex method of modeling motion but break down in complex real-world situations. With trapezoidal motion profiles, we can model more complex motion and account for many more factors. Trapezoidal motion profiles work by first calculating a theoretically perfect path to get A to become B using a given maximum velocity and maximum acceleration.
+
+<img src="/assets/icons/pid-visual/Motion-Profile-Feature.jpg" style="border:5px solid black;display: block;margin-left: auto;margin-right: auto;width: 60%;">
+
+To get from this path to a motor output we need to do some math:
+
+$$output = v(t) * kV + a(t) * kA + cos(p(t)) * kG + kS * sign(v(t))$$
+* p(t) = position over time \| v(t) = velocity over time \| a(t) = acceleration over time
+* S term is in the direction of v(t)
+* G term will vary depending on the object
+
+We start with the velocity term which is the predicted velocity multiplied by a constant kV. The velocity term is the largest factor in the movement of the object. Next we have the acceleration term which is similar to the velocity term but with predicted acceleration and kA. This term is active at the beginning and end of a motion and helps with acceleration and deceleration. After that we have the gravitational term. The job of the gravitational term is to counteract the forces of gravity, which is different for every application so there is no one equation for it. Commonly the gradational term is represented by the cosine of the position as when the cosine is the largest, so are the gradational forces. Finally we have the “S” term which is used to account for all friction in the system, because the friction is related to the direction of the velocity the “S” term is multiplied by the sign of the velocity.
+
+Additionally, you can add a PID between the current position and predicted position to make sure the object follows the motion profile with greater accuracy. This can also be helpful in accounting for springback when the object comes to a stop.
+
 Full code: [PID Visualizer](https://github.com/aidankeighron/PID-Visualizer){:target="\_blank"}
+
+Images from:
+- https://jjrobots.com/pid/
+- https://www.motioncontroltips.com/what-is-a-motion-profile/
