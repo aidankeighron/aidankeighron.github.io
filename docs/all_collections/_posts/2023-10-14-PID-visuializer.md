@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PID Visuializer
+title: PID Visualizer
 date: 2023-10-14 12:00:00
 categories: [java, FRC]
 ---
