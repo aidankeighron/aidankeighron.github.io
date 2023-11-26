@@ -160,7 +160,7 @@ public static class DeleteThread extends Thread {
 }
 ```
  
-When deleting files with code, we need to delete everything recursively because java only allows us to delete empty folders. Essentially we are doing the same thing we did when creating the files and folders but in reverse.
+When deleting files with code, we need to delete everything recursively because Java only allows us to delete empty folders. Essentially we are doing the same thing we did when creating the files and folders but in reverse.
  
 ## Final Thoughts
  
