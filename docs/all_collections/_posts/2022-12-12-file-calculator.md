@@ -33,11 +33,11 @@ public int add(int x1, int x2) {
 }
 ```
 
-Because it takes up space. For this project, we are trying to limit the space of whatever does the calculations i.e., `return x1 + x2`. Nearly every programming language except for a few esoteric languages has a file size that is greater than zero bytes. So how is creating a zero-byte calculator possible? First, let me clarify a few things. For this project, there will be a program (written in java for no particular reason) to generate this calculator and perform operations with it. The actual calculations will still be done with zero bytes but we will be using a program to interact with it.
+Because it takes up space. For this project, we are trying to limit the space of whatever does the calculations, i.e., `return x1 + x2`. Nearly every programming language except for a few esoteric languages has a file size that is greater than zero bytes. So how is creating a zero-byte calculator possible? First, let me clarify a few things. For this project, there will be a program (written in Java for no particular reason) to generate this calculator and perform operations with it. The actual calculations will still be done with zero bytes, but we will be using a program to interact with it.
  
-Folders and empty files "technically" take up zero space (They do take up space in your filesystem's metadata files but we are talking about their size according to their properties). Because of that, we will be using both folders and empty files to create the calculator. As much as I would love to make a graphing calculator out of folders and files, I don't want my computer to spend the rest of its life generating them. So let's add some restrictions so we are not generating millions of folders and files.
+Folders and empty files "technically" take up zero space (they do take up space in your filesystem's metadata files, but we are talking about their size according to their properties). Because of that, we will be using both folders and empty files to create the calculator. As much as I would love to make a graphing calculator out of folders and files, I don't want my computer to spend the rest of its life generating them. So let's add some restrictions so we are not generating millions of folders and files.
  
-- Calculable numbers are from 0 and 1000
+- Calculable numbers range from 0 and 1000
 - The only operation available is addition
 
  
@@ -160,7 +160,7 @@ public static class DeleteThread extends Thread {
 }
 ```
  
-When deleting files with code, we need to delete everything recursively because java only allows us to delete empty folders. Essentially we are doing the same thing we did when creating the files and folders but in reverse.
+When deleting files with code, we need to delete everything recursively because Java only allows us to delete empty folders. Essentially we are doing the same thing we did when creating the files and folders but in reverse.
  
 ## Final Thoughts
  
