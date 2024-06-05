@@ -9,7 +9,7 @@ categories: [java, FRC]
 
 Because I use PIDs frequently in robotics, I made a visualization of how a PID works to make it easier to understand. I'll explain what PIDs are and how they work, as well as show off my visualization. As a bonus, at the end, I'll discuss how to improve your PIDs by using a trapezoidal motion profile.
 
-The code shown here has been modified to make it easier to explain. If you would like to check it out, the full code is available on GitHub: [PID Visualizer](https://github.com/aidankeighron/PID-Visualizer){:target="\_blank"}
+The code shown here has been modified to make it easier to explain. If you would like to check it out, the full code is available on GitHub: [PID Visualizer](https://github.com/aidankeighron/PID-visualizer){:target="\_blank"}
 
 <details>
 <summary><b>Table of Contents</b></summary>
@@ -17,7 +17,7 @@ The code shown here has been modified to make it easier to explain. If you would
 <li><a href="#project-overview">Project Overview</a></li>
 <li><a href="#what-is-a-pid-and-where-is-it-used?">What is a PID and Where is it Used?</a></li>
 <li><a href="#how-pid-works">How PID Works</a></li>
-<li><a href="#pid-visualizer">PID Visualizer</a></li>
+<li><a href="#PID-visualizer">PID Visualizer</a></li>
 <li><a href="#bonus-taking-pid-to-the-next-level">BONUS Taking PID to the Next Level</a></li>
 </ul>
 </details>
@@ -95,7 +95,7 @@ We start with the velocity term, which is the predicted velocity multiplied by a
 
 Additionally, you can add a PID between the current position and the predicted position to make sure the object follows the motion profile with greater accuracy. This can also be helpful in accounting for spring back when the object comes to a stop.
 
-Full code: [PID Visualizer](https://github.com/aidankeighron/PID-Visualizer){:target="\_blank"}
+Full code: [PID Visualizer](https://github.com/aidankeighron/PID-visualizer){:target="\_blank"}
 
 Images from:
 - https://jjrobots.com/pid/

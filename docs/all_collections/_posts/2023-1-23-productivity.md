@@ -10,7 +10,7 @@ categories: [java, software]
 Productivity is a project I designed to help me with task organization and time management. It originally started as just a checklist to help visualize tasks.
 Over the development period, it has grown into so much more. With suggestions from friends and feedback from beta testers, I believe that it has become a useful time-management tool.
 
-If you would like to check it out, the full code is available on GitHub: [Productivity](https://github.com/aidankeighron/Productivity){:target="\_blank"}.
+If you would like to check it out, the full code is available on GitHub: [Productivity](https://github.com/aidankeighron/productivity){:target="\_blank"}.
 
 <details>
 <summary><b>Table of Contents</b></summary>

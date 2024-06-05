@@ -9,7 +9,7 @@ categories: [java script, software]
 
 I often need to save large groups of tabs either for later use or for use on another device. Usually, I will save every tab to a bookmarked folder, but this is tedious and unnecessary. So I created this Chrome extension to make that easier.
 
-The code shown here has been modified to make it easier to explain. If you would like to check it out, the full code is available on GitHub: [Group Extension](https://github.com/aidankeighron/Group-Extension){:target="\_blank"}
+The code shown here has been modified to make it easier to explain. If you would like to check it out, the full code is available on GitHub: [Group Extension](https://github.com/aidankeighron/group-extension){:target="\_blank"}
 
 <details>
 <summary><b>Table of Contents</b></summary>
@@ -82,5 +82,5 @@ function loadGroup(groupName) {
 
 First, we get all of the saved URLs for the given group name from Chrome storage. Then we create the first tab and add it to a new group, creating it in the process. This step is needed because we need a group ID to add tabs too, so we create the group first using the first URL. Next, we loop through the other URLs adding each of them.
 
-Full code: [Group Extension](https://github.com/aidankeighron/Group-Extension){:target="\_blank"}
+Full code: [Group Extension](https://github.com/aidankeighron/group-extension){:target="\_blank"}
 Store link: [Chrome Web Store](https://chrome.google.com/webstore/detail/group-management/mipeplimdkiijcfjjkdgkhemfcpoaied?hl=en&authuser=0){:target="\_blank"}

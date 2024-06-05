@@ -9,7 +9,7 @@ categories: [website, FRC]
 
 Fantasy FRC is fantasy football with robotics. It is a website that manages the full process of running a draft for FRC, and it's pretty customizable. If you want to see how it looks, check out the [showcase](#showcase).
 
-If you would like to check it out, the full code is available on GitHub: [Fantasy FRC](https://github.com/aidankeighron/Fantasy-FRC){:target="\_blank"}.
+If you would like to check it out, the full code is available on GitHub: [Fantasy FRC](https://github.com/aidankeighron/fantasy-FRC){:target="\_blank"}.
 ## Modifying
 
 The source code is protected under the MIT license, so you have full rights to modify it as long as you keep the licenses and copyright intact. NOTE: I am not an expert in JS, and while I have done my best to weed out any bugs, there might still be some out there. If you find any, please open an issue on GitHub or create a pull request with a fix.
@@ -35,7 +35,7 @@ If you run into problems during the installation process, you can ask for help a
 
 ## Download Source Code and Required Software
 
-Download the source code from [the GitHub repository](https://github.com/aidankeighron/Fantasy-FRC){:target="\_blank"} and put it on whatever computer you want to run the website. I used a dedicated machine running Ubuntu Server, but the website is not very intense, so any machine should work.
+Download the source code from [the GitHub repository](https://github.com/aidankeighron/fantasy-FRC){:target="\_blank"} and put it on whatever computer you want to run the website. I used a dedicated machine running Ubuntu Server, but the website is not very intense, so any machine should work.
 
 Install Node.js ([Windows](https://nodejs.org/en/download/){:target="\_blank"} \| [Ubuntu](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-22-04/){:target="\_blank"}). If on Linux, navigate to /server, uninstall bcrypt, and reinstall it using npm. This is needed because the Windows and Linux versions are different.
 
