@@ -21,6 +21,22 @@
         </article>
         {%endfor%}
       </section>
+        <div class="popup">
+          <div class="popup-div" id="myPopup">
+            <p>Come checkout my new and updated personal website at <a class="popuptext" href="https://www.aidankeighron.dev/">aidankeighron.dev</a></p>
+            <button onclick="togglePopup()" class="popup-close">Close</button>
+          </div>
+        </div>
+      
+        <script>
+        // When the user clicks on div, open the popup
+        function togglePopup() {
+          let popup = document.getElementById("myPopup");
+          console.log(popup.classList);
+          popup.classList.toggle("show");
+        }
+        togglePopup();
+        </script>
     </main>
     {% include category-modal.html%}
   </body>
