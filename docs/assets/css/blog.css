@@ -180,3 +180,50 @@ main {
     font-size: 1rem;
   }
 }
+
+.popup {
+  display: inline-block;
+}
+
+/* The actual popup */
+.popup .popup-div {
+  visibility: hidden;
+  width: fit-content;
+  background-color: var(--gray-2);
+  color: var(--white-1);
+  text-align: center;
+  border-radius: 12px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup-div p {
+  font-size: 18px;
+}
+
+.popup-div a {
+  font-size: 18px;
+  color: #A5FFE4;
+}
+
+.popup-close {
+  margin-top: 10px;
+  font-size: 18px;
+  background-color: unset;
+  border: var(--white-1) 2px solid;
+  padding: 5px;
+  color: var(--white-1);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
